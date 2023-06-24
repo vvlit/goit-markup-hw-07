@@ -20,11 +20,7 @@
   }
 }
 @media screen and (min-width: 458px) {
-  /* .mob-menu-contacts {
-    width: 428px;
-    margin-left: auto;
-    margin-right: auto;
-  } */
+
   .mob-menu-list,
   .mob-menu-address-list,
   .mob-menu-soc-list {
@@ -57,7 +53,7 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    margin: 16px 0;
+    margin: auto 0;
   }
 }
 @media screen and (min-width: 768px) {
