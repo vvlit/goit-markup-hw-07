@@ -19,14 +19,15 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
   </head>
   <body>
     <header class="header">
       <div class="container header-container">
+        <a class="logo logo-header link" href="./index.html"
+          >Web<span class="logo-part">Studio</span></a
+        >
         <nav class="header-nav">
-          <a class="logo logo-header link" href="./index.html"
-            >Web<span class="logo-part">Studio</span></a
-          >
           <ul class="header-list list">
             <li class="header-item">
               <a class="header-link underlined-link link" href="./index.html"
@@ -57,6 +58,99 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="menu-open-btn" data-menu-open>
+          <svg class="menu-open-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-open-btn"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden" data-menu>
+        <button type="button" class="modal-close-btn" data-menu-close>
+          <svg class="icon-close-btn" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <ul class="mob-menu-list list">
+          <li class="mob-menu-item">
+            <a
+              class="mob-menu-link mob-menu-link-studio link"
+              href="./index.html"
+              >Studio</a
+            >
+          </li>
+          <li class="mob-menu-item">
+            <a class="mob-menu-link link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="mob-menu-item">
+            <a class="mob-menu-link link" href="">Contacts</a>
+          </li>
+        </ul>
+        <div>
+          <ul class="mob-menu-address-list list">
+            <li class="mob-menu-item">
+              <a class="mob-menu-address-tel link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a
+                class="mob-menu-address-mail link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mob-menu-soc-list list">
+            <li class="team-soc-item">
+              <a
+                href=""
+                class="soc-link link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="soc-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-soc-item">
+              <a
+                href=""
+                class="soc-link link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="soc-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-soc-item">
+              <a
+                href=""
+                class="soc-link link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="soc-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-soc-item">
+              <a
+                href=""
+                class="soc-link link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg class="soc-icon" width="16" height="16">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -129,6 +223,7 @@
           <ul class="wedoing-list flex-list list">
             <li class="wedoing-item">
               <img
+                srcset="./images/we-doing-1-2x.jpg 2x"
                 src="./images/we-doing-1.jpg"
                 alt="monitor"
                 width="360"
@@ -137,6 +232,7 @@
             </li>
             <li class="wedoing-item">
               <img
+                srcset="./images/we-doing-2-2x.jpg 2x"
                 src="./images/we-doing-2.jpg"
                 alt="smartphone"
                 width="360"
@@ -145,6 +241,7 @@
             </li>
             <li class="wedoing-item">
               <img
+                srcset="./images/we-doing-3-2x.jpg 2x"
                 src="./images/we-doing-3.jpg"
                 alt="laptop"
                 width="360"
@@ -155,18 +252,22 @@
         </div>
       </section>
       <section class="team section">
-        <div class="container">
+        <div class="container tab-container">
           <h2 class="section-title">Our Team</h2>
           <ul class="team-list flex-list list">
             <li class="team-item">
               <img
+                srcset="
+                  ./images/our-team-1.jpg    1x,
+                  ./images/our-team-1-2x.jpg 2x
+                "
                 src="./images/our-team-1.jpg"
                 alt="team member 1"
                 width="264"
                 height="260"
               />
               <div class="team-item-text">
-                <h3 class="titles">Mark Guerrero</h3>
+                <h3 class="team-titles">Mark Guerrero</h3>
                 <p class="paragraph-text">Product Designer</p>
                 <ul class="team-soc-list list">
                   <li class="team-soc-item">
@@ -222,13 +323,17 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/our-team-2.jpg    1x,
+                  ./images/our-team-2-2x.jpg 2x
+                "
                 src="./images/our-team-2.jpg"
                 alt="team member 2"
                 width="264"
                 height="260"
               />
               <div class="team-item-text">
-                <h3 class="titles">Tom Ford</h3>
+                <h3 class="team-titles">Tom Ford</h3>
                 <p class="paragraph-text">Frontend Developer</p>
                 <ul class="team-soc-list list">
                   <li class="team-soc-item">
@@ -284,13 +389,17 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/our-team-3.jpg    1x,
+                  ./images/our-team-3-2x.jpg 2x
+                "
                 src="./images/our-team-3.jpg"
                 alt="team member 3"
                 width="264"
                 height="260"
               />
               <div class="team-item-text">
-                <h3 class="titles">Camila Garcia</h3>
+                <h3 class="team-titles">Camila Garcia</h3>
                 <p class="paragraph-text">Marketing</p>
                 <ul class="team-soc-list list">
                   <li class="team-soc-item">
@@ -346,13 +455,17 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/our-team-4.jpg    1x,
+                  ./images/our-team-4-2x.jpg 2x
+                "
                 src="./images/our-team-4.jpg"
                 alt="team member 4"
                 width="264"
                 height="260"
               />
               <div class="team-item-text">
-                <h3 class="titles">Daniel Wilson</h3>
+                <h3 class="team-titles">Daniel Wilson</h3>
                 <p class="paragraph-text">UI Designer</p>
                 <ul class="team-soc-list list">
                   <li class="team-soc-item">
@@ -409,10 +522,10 @@
           </ul>
         </div>
       </section>
-      <section class="section">
-        <div class="container">
+      <section class="customers section">
+        <div class="container tab-container">
           <h2 class="section-title">Customers</h2>
-          <ul class="flex-list list">
+          <ul class="customers-list flex-list list">
             <li class="customers-item">
               <a href="" class="customers-link link">
                 <svg class="customers-icon" width="104" height="56">
@@ -460,7 +573,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer-container container">
+      <div class="footer-container tab-container container">
         <div class="footer-part1">
           <a class="footer-logo logo link" href="./index.html"
             >Web<span class="logo-footer-part">Studio</span>
@@ -630,5 +743,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
